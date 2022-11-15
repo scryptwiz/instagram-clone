@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Head>
-        <title>Create Next App</title>
+        <title>Instagram - Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
