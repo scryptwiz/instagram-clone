@@ -8,6 +8,6 @@
     }
 
     .deskLink {
-        @apply flex gap-2 items-center text-gray-700
+        @apply flex gap-4 items-center
     }
 }
