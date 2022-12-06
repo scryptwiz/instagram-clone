@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div className="w-full md:w-fit lg:w-2/12 border-r border-gray-200">
             {/* Large Screen Header */}
-            <header className="hidden bg-white md:flex flex-col justify-between h-full mx-auto px-7 lg:py-7 md:py-5">
+            <header className="hidden bg-white md:flex flex-col justify-between h-screen sticky left-0 top-0 mx-auto px-7 lg:py-7 md:py-5">
                 {/* Logo section */}
                 <div className="relative hidden lg:inline-flex w-28 h-14 cursor-pointer">
                     <Image src="/logo.png" layout="fill" objectFit="contain" />
