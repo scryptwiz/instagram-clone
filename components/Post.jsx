@@ -1,4 +1,4 @@
-import { BiDotsHorizontalRounded } from "react-icons/bi"
+import { BiBookBookmark, BiChat, BiDotsHorizontalRounded, BiHappyHeartEyes, BiHeart, BiPaperPlane } from "react-icons/bi"
 
 const Post = ({ id, username, userImg, img, caption }) => {
     return (
@@ -10,7 +10,28 @@ const Post = ({ id, username, userImg, img, caption }) => {
                 </span>
                 <BiDotsHorizontalRounded className="text-gray-400 text-xl cursor-pointer" />
             </div>
+
             <img src={img} className='object-cover w-full' alt={username} />
+
+            <div className="flex justify-between p-5">
+                <div className="flex gap-2">
+                    <BiHeart className="btn" />
+                    <BiChat className="btn" />
+                    <BiPaperPlane className="btn" />
+                </div>
+                <BiBookBookmark className="btn" />
+            </div>
+
+            <p className="truncate px-5 text-sm text-gray-600">
+                <span className="font-bold mr-1 capitalize">{username}</span>{caption}
+            </p>
+
+            <hr className="border border-gray-200 mt-4" />
+            <form className="flex items-center px-4 py-3">
+                <BiHappyHeartEyes className="text-2xl" />
+                <input type="text" placeholder="Add a comment" className="border-none flex-1 focus:ring-0 outline-none" />
+                <button className="font-semibold text-blue-400">Post</button>
+            </form>
         </div>
     )
 }
