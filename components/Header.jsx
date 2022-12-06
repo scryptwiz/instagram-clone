@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillHome, AiOutlineMenu, AiOutlineSend } from 'react-icons/ai';
-import { BiSearch } from 'react-icons/bi';
+import { AiFillHome, AiOutlineMenu, AiOutlineSearch, AiOutlineSend } from 'react-icons/ai';
+import { BiMessageSquareAdd, BiMoviePlay, BiSearch } from 'react-icons/bi';
 import { CgProfile } from 'react-icons/cg';
 import { FiInstagram } from 'react-icons/fi';
 import { MdOutlineAddBox, MdOutlineExplore, MdOutlineFavoriteBorder } from 'react-icons/md';
 
 const Header = () => {
     return (
-        <div className="w-full md:w-fit lg:w-2/12 border-r border-gray-200 h-screen">
+        <div className="w-full md:w-fit lg:w-2/12 border-r border-gray-200">
             {/* Large Screen Header */}
-            <header className="hidden md:flex flex-col justify-between h-full mx-auto px-5 lg:py-7 md:py-5">
+            <header className="hidden bg-white md:flex flex-col justify-between h-full mx-auto px-7 lg:py-7 md:py-5">
                 {/* Logo section */}
                 <div className="relative hidden lg:inline-flex w-28 h-14 cursor-pointer">
                     <Image src="/logo.png" layout="fill" objectFit="contain" />
@@ -56,15 +56,12 @@ const Header = () => {
                 </div>
             </header>
             {/* Small Screen Header */}
-            <header className="md:hidden flex justify-between py-2 px-3 w-full shadow">
-                <div className="relative hidden sm:inline-flex w-24 h-10 cursor-pointer">
+            <header className="md:hidden bg-white flex items-center justify-between py-2 px-3 w-full shadow">
+                <div className="relative inline-flex w-24 h-10 cursor-pointer">
                     <Image src="/logo.png" layout="fill" objectFit="contain" />
                 </div>
-                <div className="flex gap-10 items-center">
-                    <div className="relative rounded">
-                        <BiSearch className="text-xl text-gray-500 absolute inset-y-0 my-auto ml-2" />
-                        <input type="text" className="rounded text-sm text-gray-500 bg-gray-200 border-none pl-8" placeholder="Search" />
-                    </div>
+                <div className="flex items-center gap-4">
+                    <BiMessageSquareAdd className="text-gray-500 text-2xl" />
                     <MdOutlineFavoriteBorder className="text-gray-500 text-2xl" />
                 </div>
             </header>
